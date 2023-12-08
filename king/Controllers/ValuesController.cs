@@ -84,7 +84,7 @@ namespace king.Controllers
           var students= collegeRepository.students.Where(s => s.name.Contains(namestring) ).ToList();
             if(students.Count == 0)
             {
-                return BadRequest("there are no students with this string");
+                return BadRequest("There are no students");
             }
             return Ok(students);
 
